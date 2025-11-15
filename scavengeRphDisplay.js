@@ -334,8 +334,13 @@ function main() {
     calculateResults(100, '02:00:00');
 }
 
+// Remove any existing window
 if (window.scavengeWindow) {
-    document.body.removeChild(window.scavengeWindow);
+    try { document.body.removeChild(window.scavengeWindow); } catch(e) {}
 }
+
+// Run the main function
 main();
+
+// Store reference to the window
 window.scavengeWindow = document.querySelector('div:last-child');
