@@ -1,5 +1,7 @@
 // Tribal Wars Scavenge Efficiency Calculator - Game Styled
 function main() {
+    console.log('Scavenge script started');
+    
     var data = localStorage.getItem('scavengeData');
     if (!data) {
         alert('No scavenge data found. Please run the data collector first.');
@@ -370,6 +372,7 @@ function main() {
     
     document.body.appendChild(container);
     calculateResults(100, '02:00:00');
+    console.log('Scavenge script completed');
 }
 
 // Auto-execute when loaded
